@@ -12,11 +12,12 @@ export default function Layout({ children }) {
     const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth >= 1024)
     }
-    checkScreenSize() // Check once on mount
+    checkScreenSize()
     window.addEventListener('resize', checkScreenSize)
 
     return () => window.removeEventListener('resize', checkScreenSize)
   }, [])
+
   return (
     <div className="flex">
       <Navbar isNavVisible={isNavVisible} setIsNavVisible={setIsNavVisible} />

@@ -4,7 +4,7 @@ import TodayTasks from '@/components/TodayTasks'
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <TodayTasks />
     </div>
   )
